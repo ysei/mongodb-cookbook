@@ -22,7 +22,7 @@ template "/etc/apt/sources.list.d/mongodb.list" do
   notifies :run, resources(:execute => "add apt keys"), :immediately
 end
 
-package "mongodb-stable"
+package "mongodb-10gen"
 
 service "mongodb" do
   case node[:platform]
